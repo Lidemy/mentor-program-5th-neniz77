@@ -34,9 +34,28 @@
 輸入 `git commit -am “提交第一週作業”`，謹慎一點的話可以再輸入 `git status` 確認一下有沒有檔案未被 commit。
 
 ### 3-2 同步到遠端資料庫
-輸入`git push` 來把 commit 後的新版本推送到遠端的資料庫。
+輸入`git push origin week1` 來把 commit 後的新版本，推送到 origin 的 branch week1。
 
 ## 四、Pull request
 1. 到 GitHub pull request 的分頁，按綠色按鈕 create pull request。在 
 2. base 選擇 master，compare 選擇你這週新增的 branch 名稱，第一週就是 week1。意思是你要請求把 week1 合併到 master 這條 branch。
 3. 可以在下方輸入一些關於這次 pull request 的說明。
+
+#### 提醒
+- 在 pull request 之後，如果還想 commit 新的版本，不用再 pull request 一次，只要重複 **[三、提交新版本與同步]** 的步驟，就可以在 pull request 的頁面看到新的 commit。
+- 在 commit 分頁，可以看到每次 commit 更動的內容。
+- 在進到下一個步驟之前，先到 file changed 分頁做最後檢查，看這週的每個檔案都有順利交上來。
+
+## 五、到學習系統上交作業
+複製 pull request 的網址，到學習系統「課程總覽」對應的週次按「繳交作業」貼上網址。記得看完自我檢討再繳交。
+
+## 六、作業改完後
+助教改完作業之後，會把這次作業新增的 branch merge 到 master。遠端的 repository 有了更動，本地端也要把更動 pull 回來。所以接著要在本地 terminal 執行以下步驟：
+
+1. `git checkout master` ：切換到本地 master 的分支。
+2. `git pull origin master` ：把 origin 最新的 master branch 拉到本地，來更新本地的 master branch。
+
+本地的 master branch在執行以上步驟後，已經有被改完的第一週作業內容，因此可以把當初為了要交第一週作業而新增的 week1 branch 刪掉：`git branch -d week1`。
+
+這樣就完成了一週的交作業流程。
+

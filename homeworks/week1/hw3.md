@@ -7,6 +7,7 @@ command line 就是「對電腦下指令」。一般我們在操作電腦，點�
 ### 1.2那 command line 和一般操作電腦有什麼不同？
 一般我們操作的都是「圖形化介面」(GUI，Graphic User Interface），透過點擊畫面上的按鈕來操作電腦，比如說我們點擊視窗上方的「x」，電腦會接收到「關閉視窗」的指令。
 command line 對電腦下指令的方式則是透過「指令化介面」(CUI，Command Line Interface)。用鍵盤輸入文字，直接用電腦懂的語言來輸入指令。這也是 GUI 還沒發明出來時，人們最常拿來對電腦下指令的方式。
+之所以要使用 command line，是因為有許多指令並沒有做成圖形化介面，必須透過 command line 來完成。
 
 ## 2. 怎麼用 command line？
 首先，打開電腦的終端機（terminal）。下面列出一些常見的基本指令，在 terminal 輸入這些指令然後按 enter 之後，可以看到電腦如何執行這些指令。

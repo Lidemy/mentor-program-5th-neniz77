@@ -1,4 +1,4 @@
-## 交作業流程
+# 交作業流程
 ## ㄧ、設定作業 repo
 ### 1-1 產生 repo
 用 GitHub Classroom 的連結來自動產生一個名稱叫做 Lidemy/mentor-program-5th-(你的GitHub帳號) 的 repository，這個就是之後用來交作業的地方。
@@ -7,7 +7,7 @@
 在 repo 頁面「 下載 code」的圖示點開，複製資料庫連結網址。接著在你電腦找到一個想放這個資料庫的資料夾，在 terminal  切換到那個資料夾，輸入 `git clone 網址`。
 
 ## 二、開新 branch 寫作業
-根據 GitHub flow 工程師協作資料庫的規範，每當想要增加或修改資料庫時，要先新增一個 branch，pull request 讓大家討論、修正這個更動之後，最後再 merge 回去原本的 master branch。每週的交作業，也會依照這個流程來進行。
+根據 Git Workflow 工程師協作資料庫的規範，每當想要增加或修改資料庫時，要先新增一個 branch，pull request 讓大家討論、修正這個更動之後，最後再 merge 回去原本的 master branch。每週的交作業，也會依照這個流程來進行。
 
 ### 2-1 新增一個本機端的 branch
 之後每週交作業，就是一週開一個新的 branch 來提交這個更動。

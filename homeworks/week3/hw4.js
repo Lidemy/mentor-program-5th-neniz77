@@ -13,7 +13,7 @@ rl.on('close', () =>
 
 function solve(lines) {
   const str = lines[0]
-  console.log(isPalindrome(str))
+  console.log(isPalindrome(str) ? 'True' : 'False')
 }
 
 function isPalindrome(str) {
@@ -22,6 +22,6 @@ function isPalindrome(str) {
     newStr += str[i]
   }
   if (newStr === str) {
-    return 'True'
-  } else return 'False'
+    return true
+  } else return false
 }

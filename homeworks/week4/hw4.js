@@ -1,10 +1,12 @@
 const request = require('request')
 
+const BASE_URL = 'https://api.twitch.tv/kraken'
+const CLIENT_ID = '4wiww36eeo54svja4rq9u514aw6e0o'
 const options = {
-  url: 'https://api.twitch.tv/kraken/games/top',
+  url: `${BASE_URL}/games/top`,
   headers: {
     Accept: 'application/vnd.twitchtv.v5+json',
-    'Client-ID': '4wiww36eeo54svja4rq9u514aw6e0o'
+    'Client-ID': CLIENT_ID
   }
 }
 

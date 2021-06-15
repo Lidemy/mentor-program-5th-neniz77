@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Questrial", "MicrosoftJhengHei";
+  font-family: 'Questrial', 'MicrosoftJhengHei';
 }
 h2 {
   margin: 0;
@@ -72,7 +72,7 @@ a {
   transform: translate(-50%, -50%);
 }
 .banner:after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -122,7 +122,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.comment {
+.section__comment__content {
   margin: 72px 20px 36px 20px;
 }
 /* btn */

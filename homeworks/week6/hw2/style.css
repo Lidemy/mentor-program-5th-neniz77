@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-size: 36px;
 }
-.apply-form__desc {
+.apply-form__content {
   margin-top: 32px;
   line-height: 1.5em;
 }
@@ -36,7 +36,7 @@ body {
   font-weight: normal;
   margin-bottom: 18px;
 }
-.required::after {
+.input-block__title--required::after {
   content: ' *';
   color: #e74149;
 }

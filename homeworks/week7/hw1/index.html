@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>新拖延運動報名表</title>
-    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="wrapper">
-      <form class="apply-form">
         <h1 class="apply-form__title">新拖延運動報名表單</h1>
-        <div class="apply-form__desc">
+        <div class="apply-form__content">
           活動日期：2020/12/10 ~ 2020/12/11</br>
           活動地點：台北市大安區新生南路二段1號
           <p class="apply-form__alert">*必填</p>
         </div>
-        <div class="input-block">
-          <div class="input-block__title required">暱稱</div>
+        <form class="apply-form">
+        <div class="input-block input-block--required hide-error" >
+          <div class="input-block__title">暱稱</div>
           <input type="text" name="nickname" placeholder="您的回答" />
+         <div class="input-block--alert">請輸入暱稱</div>
         </div>
-        <div class="input-block">
-          <div class="input-block__title required">電子郵件</div>
+        <div class="input-block input-block--required hide-error">
+          <div class="input-block__title">電子郵件</div>
           <input type="email" name="email" placeholder="您的電子郵件" />
+          <div class="input-block--alert">請輸入電子郵件</div>
         </div>
-        <div class="input-block">
-          <div class="input-block__title required">手機號碼</div>
+        <div class="input-block input-block--required hide-error">
+          <div class="input-block__title">手機號碼</div>
           <input type="tel" name="phoneNumber" placeholder="您的手機號碼" />
+          <div class="input-block--alert">請輸入手機號碼，格式如09xxxxxxxx</div>
         </div>
-        <div class="input-block">
-          <div class="input-block__title required">報名類型</div>
-          </label><input type="radio" name="register-type" />
+        <div class="input-block input-block--required hide-error">
+          <div class="input-block__title">報名類型</div>
+          <label><input type="radio" name="register-type" value='lying in bed'/>
           躺在床上用想像力實作</label><br /><br />
-          <label><input type="radio" name="register-type" />
+          <label><input type="radio" name="register-type" value='lying on the floor' />
           趴在地上滑手機找現成的</label>
+          <div class="input-block--alert">請選擇報名類型</div>
         </div>
-        <div class="input-block">
-          <div class="input-block__title required">怎麼知道這個活動的</div>
-          <input type="text" placeholder="您的回答" />
+        <div class="input-block input-block--required hide-error">
+          <div class="input-block__title">怎麼知道這個活動的</div>
+          <input type="text" name='how-to-know' placeholder="您的回答" />
+           <div class="input-block--alert">請輸入您的回答</div>
         </div>
         <div class="input-block">
           <div class="input-block__title">其他</div>
@@ -45,12 +50,13 @@
           <input type="text" placeholder="您的回答" />
         </div>
         <div class="apply-form__submit">
-          <input type="submit" />
+          <input type="submit"/>
         </div>
-        <div class="apply-form__desc">請勿透過表單送出您的密碼。</div>
+        <div class="apply-form__content">請勿透過表單送出您的密碼。</div>
       </form>
     </div>
     <footer>© 2020 © Copyright. All rights Reserved.</footer>
-  <script src="./index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
+

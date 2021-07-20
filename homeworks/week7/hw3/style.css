@@ -1,0 +1,111 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: rgb(229, 229, 229);
+  letter-spacing: 0.1em;
+}
+.container {
+  background: #fff;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 80px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.navbar {
+  height: 90px;
+  box-shadow: 1.3px 1.3px 6px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__logo {
+  background-color: #e92331;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  font-size: 24px;
+}
+.navbar__title {
+  font-weight: bold;
+  font-size: 26px;
+  margin-left: 24px;
+}
+.main {
+  padding: 0px 50px 20px 50px;
+}
+.type-task {
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  padding-left: 46px;
+  margin: 20px 0 15px 0;
+  background: #fbfafa;
+  border-radius: 5.5px;
+  letter-spacing: 0.1em;
+  color: #848484;
+  font-weight: 500;
+}
+.type-task::placeholder {
+  color: #d6d6d6;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+.type-task:focus {
+  background-color: #fff;
+  outline: none;
+  border-bottom: 1.5px solid #c84345;
+  border-radius: 0;
+}
+.task {
+  display: block;
+  list-style: none;
+  color: #848484;
+  font-size: 18px;
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task:hover {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+.task label input {
+  display: none;
+}
+.task label input + span {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 100px;
+  margin-left: 20px;
+  background: url(./svg/unchecked.svg) no-repeat;
+  line-height: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.task label input:checked + span {
+  background: url(./svg/checked.svg) no-repeat;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.task__delete {
+  margin-right: 10px;
+  border: 0;
+  width: 20px;
+  background: url(./svg/cross.svg) no-repeat;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.task__delete:hover {
+  opacity: 1;
+}

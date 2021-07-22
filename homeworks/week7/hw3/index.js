@@ -7,7 +7,7 @@ document.querySelector('.type-task').addEventListener('keypress', (e) => {
     taskItem.classList.add('task')
     taskItem.innerHTML = `
       <label>
-          <input type="checkbox" />
+          <input class="task__check" type="checkbox" />
           <span class="task__text">${escapeHtml(taskText)}</span>
       </label>
       <input class="task__delete" type="button" />`
@@ -17,19 +17,20 @@ document.querySelector('.type-task').addEventListener('keypress', (e) => {
 // 處理下方任務管理欄位
 document.querySelector('.tasks').addEventListener('click', (e) => {
   // 刪除 task
-  if (e.target.classList.contains('task__delete')) {
-    const task = e.target.closest('.task')
-    document.querySelector('.tasks').removeChild(task)
+  const { target } = e
+  if (target.classList.contains('task__delete')) {
+    target.parentNode.remove()
     return
   }
   // 把已勾選的 task 移到最後面
-  if (e.target.checked) {
-    const done = e.target.closest('.task')
-    document.querySelector('.tasks').removeChild(done)
-    document.querySelector('.tasks').appendChild(done)
+  if (target.classList.contains('task__check')) {
+    if (target.checked) {
+      const done = target.closest('.task')
+      document.querySelector('.tasks').removeChild(done)
+      document.querySelector('.tasks').appendChild(done)
+    }
   }
 })
-
 function escapeHtml(unsafe) {
   return unsafe
     .replace(/&/g, '&amp;')

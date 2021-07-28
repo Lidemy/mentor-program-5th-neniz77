@@ -1,0 +1,247 @@
+/* global */
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Questrial', '微軟正黑體', 'MicrosoftJhengHei';
+}
+a {
+  text-decoration: none;
+  color: #010101;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.site-name {
+  font-size: 36px;
+  color: #489846;
+  display: flex;
+  align-items: center;
+}
+/* navbar */
+.navbar {
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+}
+.navbar .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__list {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar__list__item a {
+  text-align: center;
+  display: block;
+  padding: 14px 25px;
+  transition: all 0.3s;
+}
+.navbar__list__item a:hover,
+.navbar__list__item a:active {
+  color: white;
+  background: #ff7286;
+  border-radius: 8px;
+}
+/* jumbotron */
+.jumbotron {
+  height: 580px;
+  background: url('./image/bg.jpg') center/cover no-repeat;
+}
+.jumbotron::after {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.jumbotron__title {
+  display: inline-block;
+  /* 預設的 display:block 佔整行會讓 tramslateX(-50%) 推到最左邊 */
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+/* section */
+.section {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.section__title {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+.section__title::before {
+  content: '';
+  border-left: 15px solid #a3dea2;
+  padding-left: 16px;
+}
+/* intro */
+.intro__content {
+  font-size: 16px;
+  line-height: 2.3em;
+  padding-bottom: 80px;
+}
+.intro__buttons {
+  display: flex;
+  justify-content: center;
+}
+.intro .btn {
+  display: inline-block;
+  padding: 64px 80px;
+  background-color: rgb(223, 177, 177);
+  border-radius: 10px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #3e613d;
+  margin-left: 20px;
+  transition: all 0.3s;
+}
+.intro .btn:hover {
+  transform: scale(1.05);
+}
+
+.intro .btn--order {
+  background-color: #a8e8e1;
+}
+.intro .btn--query {
+  background-color: #f9f9b5;
+}
+/* menu */
+.menu__albums {
+  display: flex;
+}
+.menu__albums__picture {
+  width: 25%;
+  filter: brightness(0.7);
+  transition: filter 0.3s;
+}
+.menu__albums__picture img {
+  width: 100%;
+}
+.menu__albums__picture:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
+/* feedback */
+.feedback__comments-wall {
+  display: flex;
+  justify-content: center;
+}
+.comment {
+  flex: 1;
+  border: 1px solid #c7e5ec;
+  margin-left: 16px;
+  margin-top: 96px;
+  padding: 0 25px 40px 25px;
+}
+.comment__avatar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.comment__avatar__name {
+  margin-top: 8px;
+}
+.comment__avatar__picture {
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 50%;
+}
+.comment__content {
+  margin-top: 92px;
+  line-height: 1.4em;
+  font-size: 16px;
+  letter-spacing: 0.14px;
+}
+/* footer */
+.footer__top {
+  background-color: #e8efee;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.footer__top .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__top__text {
+  color: #484848;
+  font-size: 14px;
+  line-height: 2em;
+}
+.footer__top__site {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 40px;
+}
+.footer__bottom {
+  background-color: #35564b;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+}
+/* media query */
+@media (max-width: 768px) {
+  /* navbar */
+  .navbar .wrapper {
+    flex-direction: column;
+  }
+  .navbar .site-name {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .navbar__list {
+    width: 100%;
+    padding: 0;
+  }
+  .navbar__list__item {
+    flex: 1;
+  }
+  /* intro */
+  .intro__content {
+    font-size: 13px;
+  }
+  .intro__buttons {
+    flex-direction: column;
+  }
+  .intro .btn {
+    padding: 32px 0px;
+    font-size: 20px;
+  }
+  .intro .btn--query {
+    margin-top: 12px;
+  }
+  /* feedback */
+  .feedback__comments-wall {
+    flex-direction: column;
+  }
+  .comment {
+    margin-left: 0;
+  }
+  /* footer */
+  .footer__top .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__top__site {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 28px;
+  }
+}

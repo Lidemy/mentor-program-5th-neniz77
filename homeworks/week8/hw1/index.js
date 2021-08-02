@@ -68,35 +68,3 @@ function handlePrizeData(err, prize) {
   document.querySelector('.lottery__result__message').innerText = message
   document.querySelector('.jumbotron').classList.add(className)
 }
-
-// function renderResponse(prize) {
-//   if (!prize) {
-//     alert(errorMessage)
-//     return
-//   }
-//   let message
-//   let className
-//   document.querySelector('.jumbotron__board').classList.add('hide')
-//   switch (prize) {
-//     case 'FIRST':
-//       className = 'jumbotron--first-prize'
-//       message = '恭喜你中頭獎了！日本東京來回雙人遊！'
-//       break
-//     case 'SECOND':
-//       className = 'jumbotron--second-prize'
-//       message = '二獎！90 吋電視一台！'
-
-//       break
-//     case 'THIRD':
-//       className = 'jumbotron--third-prize'
-//       message = '恭喜你抽中三獎：知名 YouTuber 簽名握手會入場券一張，bang！'
-//       break
-//     case 'NONE':
-//       className = 'jumbotron--no-prize',
-//       message = '銘謝惠顧'
-//       break
-//   }
-//   document.querySelector('.lottery__result').classList.remove('hide')
-//   document.querySelector('.lottery__result__message').innerText = message
-//   document.querySelector('.jumbotron').classList.add(className)
-// }

@@ -1,0 +1,233 @@
+/* global */
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Questrial', 'Noto Sans TC', 'MicrosoftJhengHei';
+}
+a {
+  text-decoration: none;
+  color: #010101;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.site-name {
+  font-size: 36px;
+  color: #489846;
+  display: flex;
+  align-items: center;
+}
+/* navbar */
+.navbar {
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+}
+.navbar .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__list {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar__list__item a {
+  text-align: center;
+  display: block;
+  padding: 14px 25px;
+  transition: all 0.3s;
+}
+.navbar__list__item a:hover,
+.navbar__list__item a:active {
+  color: white;
+  background: #ff7286;
+  border-radius: 8px;
+}
+/* jumbotron */
+.hide {
+  display: none;
+}
+.jumbotron {
+  height: 760px;
+  background: url('./image/games-bn.png') center/cover no-repeat;
+}
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  filter: opacity(0.4);
+}
+.jumbotron--first-prize {
+  background: url('./image/first-prize.jpg') center/cover no-repeat;
+}
+.jumbotron--second-prize {
+  background: url('./image/second-prize.jpg') center/cover no-repeat;
+}
+.jumbotron--third-prize {
+  background: url('./image/third-prize.jpg') center/cover no-repeat;
+}
+.jumbotron--no-prize {
+  background: #505050;
+  color: white;
+}
+.jumbotron__title {
+  display: inline-block;
+  /* 預設的 display:block 佔整行會讓 tramslateX(-50%) 推到最左邊 */
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.jumbotron__board {
+  max-width: 500px;
+  background: #fff;
+  margin: 0 auto;
+  top: 50px;
+  padding: 40px 20px 24px 20px;
+  border-radius: 16px;
+}
+.board__title {
+  text-align: center;
+  color: #5ec1b6;
+  font-size: 24px;
+}
+.board__section {
+  border-bottom: 1px dotted #cdcdcd;
+  display: flex;
+  padding: 20px 0;
+}
+.board__section__title {
+  color: #322929;
+  font-weight: 900;
+  line-height: 26px;
+  font-size: 18px;
+}
+.board__section__content {
+  width: 340px;
+  padding-left: 22px;
+  font-size: 16px;
+  line-height: 26px;
+  z-index: 1.5;
+}
+.board__section__button {
+  background: #e62a45;
+  color: white;
+  display: block;
+  border: none;
+  padding: 18px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 36px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.board__section__button:hover {
+  opacity: 0.7;
+}
+.board__section__button:active {
+  filter: brightness(80%);
+}
+.lottery__result__message {
+  margin: 0;
+  padding-top: 190px;
+  padding-bottom: 19px;
+  text-align: center;
+  font-size: 36px;
+  color: #292222;
+}
+.lottery__result__button {
+  background: #e62a45;
+  color: white;
+  display: block;
+  border: none;
+  padding: 18px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 36px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.lottery__result__button:hover {
+  opacity: 0.7;
+}
+
+/* footer */
+.footer__top {
+  background-color: #e8efee;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.footer__top .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__top__text {
+  color: #484848;
+  font-size: 14px;
+  line-height: 2em;
+}
+.footer__top__site {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 40px;
+}
+.footer__bottom {
+  background-color: #35564b;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+}
+/* media query */
+@media (max-width: 768px) {
+  /* navbar */
+  .navbar .wrapper {
+    flex-direction: column;
+  }
+  .navbar .site-name {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .navbar__list {
+    width: 100%;
+    padding: 0;
+  }
+  .navbar__list__item {
+    flex: 1;
+  }
+  .board__message {
+    font-size: 28px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .board__section__button {
+    width: 80%;
+  }
+  /* footer */
+  .footer__top .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__top__site {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 28px;
+  }
+}
